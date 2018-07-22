@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page1">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry Text="{Binding Nombre}"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Nombre}"
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding Ocupacion}"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Ocupacion}"
+                HorizontalOptions="CenterAndExpand" />
+            <!--Tarea de contador usando MVVM-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding TextoPlano}"
+                HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding Contador}"
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Button Text="Contar" 
+                    Command="{Binding ContarCommand}"
+                    IsEnabled="{Binding IsEnabled}"/>
+            <ActivityIndicator
+                Color="Black"
+                IsRunning="{Binding IsRunning}"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
