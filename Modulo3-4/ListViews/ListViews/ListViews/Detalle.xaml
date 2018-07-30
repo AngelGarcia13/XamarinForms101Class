@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViews.Detalle"
+             Title="Employee Details">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="5">
+            <Label Text="Nombre" FontSize="Medium"/>
+            <Label Text="{Binding Empleado.Nombre}" FontSize="Small" Opacity="0.8"/>
+            <Label Text="Ocupación" FontSize="Medium"/>
+            <Label Text="{Binding Empleado.Ocupacion}" FontSize="Small" Opacity="0.8"/>
+            <Label Text="Edad" FontSize="Medium"/>
+            <Label Text="{Binding Empleado.Edad}" FontSize="Small" Opacity="0.8"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
