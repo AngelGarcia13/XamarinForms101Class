@@ -18,7 +18,7 @@
             VerticalOptions="Center"
             />
         <ListView 
-            IsVisible="{Binding IsNotRunning}"
+            IsVisible="True"
             ItemsSource="{Binding SeriesList}"
               CachingStrategy="RecycleElement"
               RowHeight="60"

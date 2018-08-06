@@ -25,7 +25,7 @@ namespace PrismSeries
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/SeriesListPage");
+            await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -35,6 +35,7 @@ namespace PrismSeries
 
             containerRegistry.RegisterForNavigation<SeriesListPage>();
             containerRegistry.Register<ISeriesService, SeriesService>();
+            containerRegistry.RegisterForNavigation<SerieDetailsPage>();
         }
         
     }

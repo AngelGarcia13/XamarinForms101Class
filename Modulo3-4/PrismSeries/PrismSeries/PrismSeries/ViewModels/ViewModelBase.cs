@@ -30,7 +30,7 @@ namespace PrismSeries.ViewModels
             set
             {
                 SetProperty(ref isRunning, value);
-                SetProperty(ref isNotRunning, !value);
+                IsNotRunning = !value;
             }
         }
 
@@ -43,7 +43,6 @@ namespace PrismSeries.ViewModels
             set
             {
                 SetProperty(ref isNotRunning, value);
-
             }
         }
 

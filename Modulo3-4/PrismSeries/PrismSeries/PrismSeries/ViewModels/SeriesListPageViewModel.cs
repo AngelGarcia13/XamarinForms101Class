@@ -27,7 +27,34 @@ namespace PrismSeries.ViewModels
             get { return seriesList; }
             set { SetProperty(ref seriesList, value); }
         }
+        
+        private Serie serie;
+        public Serie Serie
+        {
+            get { return serie; }
+            set
+            {
+                SetProperty(ref serie, value);
+                //Send single object to details
+                if (value != null)
+                {
+                    ViewDetails.Execute();
+                }
+            }
+        }
+        
+        private DelegateCommand viewDetails;
+        public DelegateCommand ViewDetails =>
+            viewDetails ?? (viewDetails = new DelegateCommand(ExecuteViewDetails));
 
+        void ExecuteViewDetails()
+        {
+            //Go to the next page...
+            var parameters = new NavigationParameters();
+            parameters.Add("model", Serie);
+            NavigationService.NavigateAsync("SerieDetailsPage", parameters);
+        }
+        
         async void GetSeriesFromAPI()
         {
             IsRunning = true;
@@ -37,7 +64,7 @@ namespace PrismSeries.ViewModels
             {
                 SeriesList.Add(item);
             }
-            
+
         }
     }
 }
