@@ -6,6 +6,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.Unity;
 using PrismSeries.Services;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PrismSeries
@@ -37,6 +40,10 @@ namespace PrismSeries
             containerRegistry.Register<ISeriesService, SeriesService>();
             containerRegistry.RegisterForNavigation<SerieDetailsPage>();
         }
-        
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+            AppCenter.Start("android=287f1917-1dc3-4a08-b3f9-c64467eb08d3;", typeof(Analytics), typeof(Crashes));
+        }
     }
 }
