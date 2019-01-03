@@ -9,6 +9,7 @@ using PrismSeries.Services;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Push;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PrismSeries
@@ -28,7 +29,7 @@ namespace PrismSeries
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("NavigationPage/SeriesListPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -43,7 +44,7 @@ namespace PrismSeries
         protected override void OnStart()
         {
             // Handle when your app starts
-            AppCenter.Start("android=287f1917-1dc3-4a08-b3f9-c64467eb08d3;", typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("android=287f1917-1dc3-4a08-b3f9-c64467eb08d3;", typeof(Analytics), typeof(Crashes), typeof(Push));
         }
     }
 }

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "134916715812",
+    "firebase_url": "https://appcenterdemo-513f5.firebaseio.com",
+    "project_id": "appcenterdemo-513f5",
+    "storage_bucket": "appcenterdemo-513f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134916715812:android:2c3f62f96b91919e",
+        "android_client_info": {
+          "package_name": "com.talkwithangel.serieslistdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134916715812-ivtsjgfad9j7kb255bmfvkrfqm1rkmjk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvG1j12B2FnRRv0YKo4Ikt3pLPkLYkVAg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
