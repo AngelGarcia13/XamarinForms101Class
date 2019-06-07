@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Microsoft.AppCenter.Analytics;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using PrismSeries.Models;
@@ -64,7 +65,7 @@ namespace PrismSeries.ViewModels
             {
                 SeriesList.Add(item);
             }
-
+            Analytics.TrackEvent("List of series fetched from internet");
         }
     }
 }

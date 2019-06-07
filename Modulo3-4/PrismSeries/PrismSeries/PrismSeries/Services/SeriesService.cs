@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using PrismSeries.Models;
 
@@ -22,8 +23,7 @@ namespace PrismSeries.Services
             }
             catch (Exception ex)
             {
-                //TODO: Logear exc...
-                //throw;
+                Crashes.TrackError(ex);
             }
             
             return result;
